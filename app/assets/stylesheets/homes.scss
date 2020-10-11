@@ -1,3 +1,194 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.top_img{
+  background-image: image-url("memo_03.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  height: 90vh;
+}
+
+.area{
+  margin: 50px 0;
+}
+
+.shop_message{
+  position: absolute;
+  top: 30vh;
+  left: 10%;
+  display: block;
+}
+
+.shop_message h1{
+  font-family: 'Vogue';
+  font-size: 70px;
+  line-height: 1.5;
+  color: #404040;
+}
+
+.shop_message .with{
+  color: #ff0000;
+}
+
+.title_area{
+  text-align: center;
+}
+
+
+.each_title{
+  display: inline-block;
+  background: linear-gradient(transparent 60%, #ffb2ff 50%);
+  margin-bottom: 50px;
+}
+
+// About Us
+
+  .text_area{
+    position: relative;
+    margin-left: 50px;
+  }
+
+  .text_area p{
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform : translateY(-50%);
+    transform : translateY(-50%);
+  }
+
+
+
+// Menu
+  .menu_area{
+    background-image: image-url("top_img02.jpg");
+    background-color:rgba(255,255,255,0.6);
+    background-blend-mode:lighten;
+    background-size: cover;
+  }
+
+  // Menu_table
+
+    .menu_table thead tr th{
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .menu_table tbody tr td{
+      font-size: 22px;
+      padding: 20px 0;
+    }
+
+    .menu_name{
+      width: 300px;
+    }
+
+    .menu_duration{
+      width: 75px;
+    }
+
+    .menu_price{
+      width: 65px;
+    }
+
+    .menu_gap{
+      width: 50px;
+    }
+
+  // img_area
+    .img_area_01{
+      display: inline-block;
+      text-align: center;
+    }
+
+
+// Access
+  // shop_info
+    .shop_info_area{
+      position: relative;
+      margin-left: 50px;
+    }
+
+    .info_logo{
+      position: absolute;
+    }
+
+    .shop_info_area h3{
+      font-family: 'CinzelDecorative';
+      position: absolute;
+      top: 20px;
+      left: 30%;
+    }
+
+    // info table
+      .info_table{
+        position: absolute;
+        top: 50%;
+        -webkit-transform : translateY(-50%);
+        transform : translateY(-50%);
+        margin: 30px 0;
+      }
+
+      .info_table tbody tr td{
+        padding: 10px 0;
+      }
+
+      .info_table tbody tr th{
+        padding-right: 40px;
+      }
+
+  // Map
+    .map_area{
+      margin: 40px 0;
+      text-align: center;
+    }
+
+
+// Reserve
+  .reserve_area{
+    background-image: image-url("top_img02.jpg");
+    background-color:rgba(255,255,255,0.6);
+    background-blend-mode:lighten;
+    background-size: cover;
+    height: 400px;
+  }
+
+  .reserve_contents{
+    text-align: center;
+  }
+
+  .reserve_text{
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+
+  .reserve_text p{
+    font-size: 20px;
+  }
+
+
+  .form_btn{
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    border: solid 3px #eb6ea0;
+    border-radius: 5px;
+  }
+
+  .form_btn:hover{
+    background-color: #eb6ea0;
+    border: solid 3px #eb6ea0;
+  }
+
+  .reserve_btn{
+    color: #eb6ea0;
+    line-height: 60px;
+    font-size: 22px;
+  }
+
+  .reserve_btn:hover{
+    color: white;
+  }

@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ @import "bootstrap";
+ @import 'font-awesome-sprockets';
+ @import 'font-awesome';
+
+ @font-face {
+  font-family: 'CaviarDreams';
+  src:asset-url('CaviarDreams.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+ }
+
+ @font-face {
+ font-family: 'Hannari';
+ src:asset-url('Hannari.otf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+ }
+
+ @font-face {
+ font-family: 'CinzelDecorative';
+ src:asset-url('CinzelDecorative-Regular.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+ }
+
+ @font-face {
+ font-family: 'Vogue';
+ src:asset-url('Vogue.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+ }
+
+ * {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family:'Hannari';
+  color: #404040;
+ }
+
+ li {
+  list-style: none;
+ }
+
+ .link_text{
+  color: #322D00;
+  text-decoration: none;
+ }
+
+ .link_text:hover{
+  text-decoration: none;
+  color: #322D00;
+ }
+
+ header{
+  position: fixed;
+  height: 10vh;
+  background-color: white;
+  transition: .5s;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+ }
+
+ .main{
+   margin-top: 10vh;
+   width: 100%;
+ }
