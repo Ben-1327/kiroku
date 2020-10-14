@@ -1,0 +1,69 @@
+<%= stylesheet_link_tag 'users' %>
+
+<div class="user_show page">
+  <div class="main">
+    <div class="container">
+      <div class="row user_header">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2 icon_img">
+          <% if @user.icon_img.present? %>
+            <%= image_tag @user.icon_img.to_s, class:"user_icon" %>
+          <% else %>
+            <%= image_tag 'default_icon.jpg', class:"default_icon"%>
+          <% end %>
+        </div>
+        <div class="col-sm-6 name_space">
+          <h2><%= @user.name %></h2>
+        </div>
+        <div class="col-sm-2 edit_space">
+          <div class="edit_btn">
+            <% if @user == current_user %>
+              <%= link_to "編集", edit_public_user_path(@user), class: "btn btn-primary" %>
+            <% end %>
+          </div>
+          <div class="col-sm-1"></div>
+        </div>
+      </div>
+      <div class="btn_space">
+        <div class="row">
+          <div class="col post_btn">
+            <% if @user == current_user %>
+              <%= link_to "新規投稿", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+          <div class="col new_cate_btn">
+            <% if @user == current_user %>
+              <%= link_to "カテゴリー登録", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="kiroku_index">
+        <h2><%= @user.name %>'s kiroku</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>日付</th>
+              <th>タイトル</th>
+              <th>内容</th>
+              <th>引用</th>
+              <th>カテゴリー</th>
+              <th>詳細</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @posts.each do |post| %>
+              <tr>
+                <td><%= post.created_at %></td>
+                <td><%= post.title %></td>
+                <td><%= post.content %></td>
+                <td><%= post.quotation %></td>
+                <td><%= post.category.name %></td>
+                <td><%= link_to "詳細", class: "btn btn-primary" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+      </div>
+    </div>
+  </div>
+</div>
