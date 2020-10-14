@@ -99,81 +99,21 @@
    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
   }
 
-  .logo_space {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 500px;
-   line-height: 10vh;
+  .logo_space{
+    position: absolute;
+    left: 100px;
   }
 
   .logo_space h3{
-    font-family: 'CinzelDecorative';
+    line-height: 10vh;
+  }
+
+  .nav_space{
     position: absolute;
-    top: 0;
-    left: 170px;
-    line-height: 10vh;
-  }
-
-  .top_logo{
-    padding: 5px;
-    margin-left: 30px;
-    width: 100px;
-    height: 100px;
-  }
-
-  .text_logo{
-    margin-left: 20px;
-    width: 250px;
-  }
-
-  .nav_space {
-    position: absolute;
-    top: 0;
-    left: 170px;
-    right: 340px;
-    line-height: 10vh;
+    right: 300px;
   }
 
 
-  .language_space {
-    margin-right: 30px;
-    position: absolute;
-    top: 0;
-    right: 170px;
-    line-height: 10vh;
-  }
-
-  .language_space select{
-    width: 120px;
-    height: 30px;
-  }
-
-  .reserve_space {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 170px;
-    line-height: 10vh;
-    background-color: #eb6ea0;
-  }
-
-  .reserve_space p{
-    color: white;
-    font-size: 23px;
-    text-align: center;
-    margin-bottom: 0;
-  }
-
-  .nav_space ul{
-    text-align: center;
-  }
-
-  .nav_space ul li{
-    display: inline-block;
-    margin: 0.2%;
-    line-height: 10vh;
-  }
 
   footer{
     width: 100%;
