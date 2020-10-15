@@ -6,7 +6,7 @@
   </div>
   <div class="container">
     <div class="form_space">
-      <%= form_with model: @post,url: public_user_posts_path(current_user)  do |f| %>
+      <%= form_with model: @post,url: user_posts_path(current_user)  do |f| %>
         </%= render 'layouts/error_messages', model: f.object %>
         <div class="row contents_form">
           <label class="col-2"><%= f.label "タイトル" %></label>
