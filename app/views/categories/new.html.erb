@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag 'posts' %>
+
+<div class="category_new page">
+  <div class="title_part">
+    <h1>New Category</h1>
+  </div>
+  <div class="container">
+    <div class="form_space">
+      <%= form_with model: @category,url: user_categories_path(current_user)  do |f| %>
+        </%= render 'layouts/error_messages', model: f.object %>
+        <div class="row contents_form">
+          <label class="col-2"><%= f.label "name" %></label>
+          <div class="col-8 category_name_form">
+            <%= f.text_field :name, placeholder:"New Category Name", class:"category_name_box" %>
+          </div>
+        </div>
+
+        <%= f.submit "Registration", class:"btn btn-success submit-btn" %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -33,7 +33,7 @@
           </div>
           <div class="col new_cate_btn">
             <% if @user == current_user %>
-              <%= link_to "カテゴリー登録", class: "btn btn-primary" %>
+              <%= link_to "カテゴリー登録", new_user_category_path(current_user), class: "btn btn-primary" %>
             <% end %>
           </div>
         </div>
