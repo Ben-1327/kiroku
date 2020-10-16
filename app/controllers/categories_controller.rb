@@ -22,6 +22,12 @@ class CategoriesController < ApplicationController
   	end
   end
 
+  def show
+    @category = Category.find(params[:id])
+    @user = @category.user
+    @posts = Post.where(category_id: @category.id, user_id: @user.id)
+  end
+
 
   private
 
