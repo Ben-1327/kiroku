@@ -65,7 +65,7 @@ gem 'devise'
 gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails'
 gem 'pry-byebug'
-gem 'kaminari','~> 1.1.1'
+gem 'kaminari','~> 1.2.1'
 gem "acts_as_follower", github: "tcocca/acts_as_follower"
 gem 'activeadmin'
 gem 'carrierwave'
