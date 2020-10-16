@@ -1,0 +1,75 @@
+<%= stylesheet_link_tag 'posts' %>
+
+<div class="post_show page">
+  <div class="container">
+    <div class="info_space">
+      <div class="row show_title">
+        <div class="col-3">
+          <p>Title:</p>
+        </div>
+        <div class="col-9">
+          <p><%= @post.title %></p>
+        </div>
+      </div>
+      <div class="row show_content">
+        <div class="col-3">
+          <p>Content:</p>
+        </div>
+        <div class="col-9">
+          <p><%= @post.content %></p>
+        </div>
+      </div>
+      <div class="row show_memo">
+        <div class="col-3">
+          <p>Memo:</p>
+        </div>
+        <div class="col-9">
+          <p><%= @post.memo %></p>
+        </div>
+      </div>
+      <div class="row show_category">
+        <div class="col-3">
+          <p>Category:</p>
+        </div>
+        <div class="col-9">
+          <p><%= @post.category.name %></p>
+        </div>
+      </div>
+      <div class="row show_date">
+        <div class="col-3">
+          <p>Date:</p>
+        </div>
+        <div class="col-9">
+          <p><%= l @post.created_at %></p>
+        </div>
+      </div>
+      <div class="row show_quotation">
+        <div class="col-3">
+          <p>Quotation:</p>
+        </div>
+        <div class="col-9">
+          <p><%= link_to "引用元", @user.quotation, target: :_blank, class:"link_text" %></p>
+        </div>
+      </div>
+    </div>
+    <div class="show_btn_space">
+      <div class="row">
+        <div class="col-6">
+          <% if @user == current_user%>
+            <%= link_to "Edit", edit_user_post_path(@user,@post), class: "btn btn-success" %>
+          <% end %>
+        </div>
+        <div class="col-6">
+          <% if @user == current_user%>
+            <%= link_to "Delete", user_post_path(@user,@post), method: :delete, class: "btn btn-danger" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="back_btn">
+          <%= link_to "Back", :back, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
