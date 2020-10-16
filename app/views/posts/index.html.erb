@@ -1,0 +1,39 @@
+<%= stylesheet_link_tag 'users' %>
+
+<div class="post_index page">
+  <div class="main">
+    <div class="title_part">
+      <h1>新規投稿</h1>
+    </div>
+    <div class="container">
+      <div class="kiroku_index">
+        <h2><%= @user.name %>'s kiroku</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>日付</th>
+              <th>タイトル</th>
+              <th>内容</th>
+              <th>引用</th>
+              <th>カテゴリー</th>
+              <th>詳細</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @posts.each do |post| %>
+              <tr>
+                <td><%= post.created_at %></td>
+                <td><%= post.title %></td>
+                <td><%= post.content %></td>
+                <td><%= post.quotation %></td>
+                <td><%= post.category.name %></td>
+                <td><%= link_to "詳細", class: "btn btn-primary" %></td>
+              </tr>
+            <% end %>
+            </%= paginate @posts %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

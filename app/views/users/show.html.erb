@@ -65,9 +65,7 @@
           </tbody>
         </table>
         <div class="show_kiroku_btn">
-          <% if @user == current_user %>
-            <%= link_to "kiroku一覧へ", class: "btn btn-primary" %>
-          <% end %>
+          <%= link_to "kiroku一覧へ",user_posts_path(@user), class: "btn btn-primary" %>
         </div>
       </div>
     </div>
