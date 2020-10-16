@@ -1,13 +1,12 @@
-<%= stylesheet_link_tag 'users' %>
+<%= stylesheet_link_tag 'posts' %>
 
 <div class="post_index page">
   <div class="main">
     <div class="title_part">
-      <h1>新規投稿</h1>
+      <h2><%= @user.name %>'s kiroku</h2>
     </div>
     <div class="container">
       <div class="kiroku_index">
-        <h2><%= @user.name %>'s kiroku</h2>
         <table>
           <thead>
             <tr>
