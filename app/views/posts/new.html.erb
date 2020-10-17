@@ -34,9 +34,9 @@
         </div>
         <div class="row contents_form">
           <label class="col-sm-2"><%= f.label "カテゴリー" %></label>
-          <%= f.select :category_id, current_user.categories.all.map{|category| [category.name, category.id]}, class:"category_select col-sm-5" %>
+          <%= f.select :category_id, current_user.categories.map{|category| [category.name, category.id]}, class:"category_select col-sm-5" %>
         </div>
-
+        
         <%= f.submit "投稿", class:"btn btn-success submit-btn" %>
       <% end %>
     </div>

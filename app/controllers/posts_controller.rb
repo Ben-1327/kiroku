@@ -14,9 +14,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    @post.category_id = current_user.categories.find_by(id: params[:category_id]).id
   	if @post.save
-  		redirect_to user_post_path(@post), notice: "投稿に成功しました!"
+  		redirect_to user_post_path(current_user, @post), notice: "投稿に成功しました!"
   	else
   		@user = User.find(params[:id])
   		render 'users/show'
@@ -39,6 +38,7 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
+    @category = @user.categories.find_by(id: @post.category_id)
   end
 
 
