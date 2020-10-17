@@ -22,6 +22,19 @@ class CategoriesController < ApplicationController
   	end
   end
 
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+  	if @category.update(category_params)
+  		redirect_to user_categories_path(current_user), notice: "更新に成功しました!"
+  	else
+  		render :edit
+  	end
+  end
+
   def show
     @category = Category.find(params[:id])
     @user = @category.user
