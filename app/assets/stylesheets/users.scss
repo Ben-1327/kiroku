@@ -1,3 +1,57 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// user_show
+  // user_header
+    .user_header{
+      height: 100px;
+      margin-bottom: 50px;
+    }
+
+    .icon_img img{
+      width: auto;
+      height: 100px;
+    }
+
+    .name_space h2{
+      line-height: 100px;
+      text-align: center;
+    }
+
+    .edit_btn{
+      line-height: 100px;
+    }
+
+    .edit_btn a{
+      text-align: center;
+    }
+
+  // btn_space
+    .btn_space{
+      margin: 50px 0;
+    }
+
+    .btn_space .row{
+      text-align: center;
+    }
+
+  // kiroku_index
+    .kiroku_index{
+      margin-top: 60px;
+    }
+
+    .kiroku_index h2{
+      text-align: center;
+    }
+
+    .kiroku_index table{
+      margin: 30px 0;
+      width: 80%;
+      text-align: center;
+    }
+
+    .show_kiroku_btn{
+      text-align: center;
+      margin: 30px 0;
+    }
