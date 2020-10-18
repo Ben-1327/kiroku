@@ -1,3 +1,43 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// post_new
+  .form_space{
+    text-align: center;
+  }
+
+  // form
+    .contents_form{
+      margin: 30px 0;
+    }
+
+    .title_box{
+      width: 400px;
+      height: 40px;
+    }
+
+    .content_box{
+      width: 400px;
+      height: 100px;
+    }
+
+    .quotation_box{
+      width: 400px;
+      height: 40px;
+    }
+
+    .memo_box{
+      width: 400px;
+      height: 100px;
+    }
+
+    #post_category_id{
+      width: 400px;
+      height: 40px;
+    }
+
+    .submit-btn{
+      width: 250px;
+    }

@@ -33,8 +33,10 @@
           </div>
         </div>
         <div class="row contents_form">
-          <label class="col-sm-2"><%= f.label "カテゴリー" %></label>
-          <%= f.select :category_id, current_user.categories.all.map{|category| [category.name, category.id]}, class:"category_select col-sm-5" %>
+          <label class="col-2"><%= f.label "カテゴリー" %></label>
+          <div class="col-8">
+            <%= f.select :category_id, current_user.categories.map{|category| [category.name, category.id]}, class:"category_box" %>
+          </div>
         </div>
 
         <%= f.submit "保存", class:"btn btn-success submit-btn" %>
