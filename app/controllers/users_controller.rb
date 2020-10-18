@@ -12,19 +12,19 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = current_user
-		@user.update(user_params)
-    if @user.user_type == 0
-      @user.update(company_id: nil)
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to user_path(@user), notice: "successfully updated user!"
+    else
+      render :edit
     end
-		redirect_to user_path(current_user), notice: "ユーザー情報の編集に成功しました。"
   end
 
 
   private
 
   def user_params
-  	params.require(:user).permit(:name,:email,:icon_img)
+  	params.permit(:name,:email,:icon_img)
   end
 
 end

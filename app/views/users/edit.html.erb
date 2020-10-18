@@ -2,7 +2,7 @@
 <div class="edit_user page">
   <h2>ユーザー情報編集</h2>
   <div class="container">
-    <%= form_with model: @user, url: {controller: 'users', action: 'update' },local: true do |f| %>
+    <%= form_with model: @user,url: user_path(current_user), method: :put,local: true do |f| %>
       </ß%= render 'layouts/error_messages', model: f.object %>
 
       <div class = "form-row">
