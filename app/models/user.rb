@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :categories, dependent: :destroy
 
+  mount_uploader :icon_img, ImageUploader
+
 end
