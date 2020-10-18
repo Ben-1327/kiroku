@@ -56,7 +56,7 @@
               <tr>
                 <td><%= l post.created_at %></td>
                 <td><%= post.title %></td>
-                <td><%= post.content %></td>
+                <td><%= post.content.truncate(25) %></td>
                 <td><%= link_to "引用元", post.quotation, target: :_blank %></td>
                 <td><%= post.category.name %></td>
                 <td><%= link_to "詳細", user_post_path(post.user, post), class: "btn btn-primary" %></td>
