@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @users = User.where(representative: false).page(params[:page]).reverse_order.per(12)
+    @user = User.find(params[:id])
   end
 
   def update
