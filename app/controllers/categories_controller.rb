@@ -15,6 +15,8 @@ class CategoriesController < ApplicationController
 
   def new
     @category = Category.new
+    @user = User.find(params[:user_id])
+    @categories = @user.categories.page(params[:page]).reverse_order
   end
 
   def create
