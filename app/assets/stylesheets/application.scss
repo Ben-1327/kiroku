@@ -18,46 +18,18 @@
   @import 'font-awesome';
 
   @font-face {
-   font-family: 'CaviarDreams';
-   src:asset-url('CaviarDreams.ttf') format('truetype');
+   font-family: 'PoiretOne-Regular';
+   src:asset-url('PoiretOne-Regular.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
   }
 
-  @font-face {
-  font-family: 'Hannari';
-  src:asset-url('Hannari.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  }
-
-  @font-face {
-  font-family: 'CinzelDecorative';
-  src:asset-url('CinzelDecorative-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  }
-
-  @font-face {
-  font-family: 'Vogue';
-  src:asset-url('Vogue.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  }
-
-  @font-face {
-  font-family: 'Diagramm-Regular';
-  src:asset-url('Diagramm-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  }
 
   * {
    margin: 0;
    padding: 0;
    max-width: 100%;
    box-sizing: border-box;
-   font-family:'Diagramm-Regular';
    color: #404040;
   }
 
@@ -104,6 +76,8 @@
   }
 
   .logo_space h3{
+    font-family: 'PoiretOne-Regular';
+    font-size: 40px;
     line-height: 10vh;
   }
 
