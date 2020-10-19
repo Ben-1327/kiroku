@@ -1,28 +1,28 @@
 <%= stylesheet_link_tag 'users' %>
 <div class="edit_user page">
-  <h2>ユーザー情報編集</h2>
+  <h2>Edit User</h2>
   <div class="container">
     <%= form_with model: @user,url: user_path(current_user), method: :put,local: true do |f| %>
       </ß%= render 'layouts/error_messages', model: f.object %>
 
       <div class = "form-row">
-        <label class="col-sm-2"><%= f.label "名前(※必須)" %></label>
+        <label class="col-sm-2"><%= f.label "Name" %></label>
         <%= f.text_field :name, autocomplete: "name", class: "col-sm-3" %>
       </div><br>
 
       <div class = "form-row">
-        <label class = "col-sm-2"><%= f.label "email(※必須)" %></label>
+        <label class = "col-sm-2"><%= f.label "Email" %></label>
         <%= f.email_field :email, autocomplete: "email", class: "col-sm-3" %>
       </div><br>
 
       <div class = "form-row">
-        <label class = "col-sm-2"><%= f.label "アイコン画像" %></label>
+        <label class = "col-sm-2"><%= f.label "Icon Image" %></label>
         <%= f.file_field :icon_img, autocomplete: "icon_img", class: "col-sm-3" %>
       </div><br>
 
 
       <div class="actions">
-        <%= f.submit "保存", class: "btn btn-success btn-lg" %>
+        <%= f.submit "Update", class: "btn btn-success btn-lg" %>
       </div><br>
     <% end %>
   </div>

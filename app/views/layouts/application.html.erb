@@ -20,17 +20,17 @@
         <div class="nav_space">
           <% if user_signed_in? %>
             <ul class="nav p-4">
-              <li class="nav-item mr-3"><%= link_to "新規投稿", new_user_post_path(current_user), class: "btn btn-nav" %></li>
-              <li class="nav-item mr-3"><%= link_to "記録",user_posts_path(current_user), class: "btn btn-nav" %></li>
-              <li class="nav-item mr-3"><%= link_to "マイページ", user_path(current_user),class: "btn btn-nav" %></li>
-              <li class="nav-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-nav" %></li>
+              <li class="nav-item mr-3"><%= link_to "New Kiroku", new_user_post_path(current_user), class: "btn btn-nav" %></li>
+              <li class="nav-item mr-3"><%= link_to "Kiroku",user_posts_path(current_user), class: "btn btn-nav" %></li>
+              <li class="nav-item mr-3"><%= link_to "My Page", user_path(current_user),class: "btn btn-nav" %></li>
+              <li class="nav-item"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-nav" %></li>
             </ul>
           <% else %>
             <ul class="nav p-4">
-              <li class="nav-item mr-3"><%= link_to "トップ", root_path, class: "btn btn-nav" %></li>
-              <li class="nav-item mr-3"><a href="#about" class="btn btn-nav">使い方</a></li>
-              <li class="nav-item mr-3"><%= link_to "ログイン", new_user_session_path, class: "btn btn-nav" %></li>
-              <li class="nav-item mr-3"><%= link_to "新規登録", new_user_registration_path, class: "btn btn-nav" %></li>
+              <li class="nav-item mr-3"><%= link_to "Top", root_path, class: "btn btn-nav" %></li>
+              <li class="nav-item mr-3"><a href="#about" class="btn btn-nav">Use</a></li>
+              <li class="nav-item mr-3"><%= link_to "Log In", new_user_session_path, class: "btn btn-nav" %></li>
+              <li class="nav-item mr-3"><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-nav" %></li>
             </ul>
           <% end %>
         </div>

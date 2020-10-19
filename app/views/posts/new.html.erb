@@ -9,31 +9,31 @@
       <%= form_with model: @post,url: user_posts_path(current_user)  do |f| %>
         </%= render 'layouts/error_messages', model: f.object %>
         <div class="row contents_form">
-          <label class="col-2"><%= f.label "タイトル" %></label>
+          <label class="col-2"><%= f.label "Title" %></label>
           <div class="col-8 title_form">
-            <%= f.text_field :title, placeholder:"タイトルを入力してください", class:"title_box" %>
+            <%= f.text_field :title, placeholder:"title", class:"title_box" %>
           </div>
         </div>
         <div class="row contents_form">
-          <label class="col-2"><%= f.label "内容" %></label>
+          <label class="col-2"><%= f.label "Contents" %></label>
           <div class="col-8 content_form">
-            <%= f.text_area :content, placeholder:"内容を入力してください", class:"content_box" %>
+            <%= f.text_area :content, placeholder:"contents", class:"content_box" %>
           </div>
         </div>
         <div class="row contents_form">
-          <label class="col-2"><%= f.label "引用" %></label>
+          <label class="col-2"><%= f.label "Quotation" %></label>
           <div class="col-8 quotation_form">
-            <%= f.text_field :quotation, placeholder:"引用元のリンクを入力してください", class:"quotation_box" %>
+            <%= f.text_field :quotation, placeholder:"Link", class:"quotation_box" %>
           </div>
         </div>
         <div class="row contents_form">
-          <label class="col-2"><%= f.label "メモ" %></label>
+          <label class="col-2"><%= f.label "Memo" %></label>
           <div class="col-8 memo_form">
-            <%= f.text_area :memo, placeholder:"メモを入力してください", class:"memo_box" %>
+            <%= f.text_area :memo, placeholder:"Memo", class:"memo_box" %>
           </div>
         </div>
         <div class="row contents_form">
-          <label class="col-2"><%= f.label "カテゴリー" %></label>
+          <label class="col-2"><%= f.label "Category" %></label>
           <div class="col-8">
             <%= f.select :category_id, current_user.categories.map{|category| [category.name, category.id]}, class:"category_box" %>
           </div>

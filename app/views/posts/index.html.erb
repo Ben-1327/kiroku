@@ -10,12 +10,12 @@
         <table>
           <thead>
             <tr>
-              <th>日付</th>
-              <th>タイトル</th>
-              <th>内容</th>
-              <th>引用</th>
-              <th>カテゴリー</th>
-              <th>詳細</th>
+              <th>Date</th>
+              <th>Title</th>
+              <th>Content</th>
+              <th>Quotation</th>
+              <th>Category</th>
+              <th>Show</th>
             </tr>
           </thead>
           <tbody>
@@ -24,9 +24,9 @@
                 <td><%= l post.created_at %></td>
                 <td><%= post.title %></td>
                 <td><%= post.content.truncate(25) %></td>
-                <td><%= link_to "引用元", post.quotation, target: :_blank %></td>
+                <td><%= link_to "Quotation", post.quotation, target: :_blank %></td>
                 <td><%= post.category.name %></td>
-                <td><%= link_to "詳細", user_post_path(post.user, post), class: "btn btn-primary" %></td>
+                <td><%= link_to "Show", user_post_path(post.user, post), class: "btn btn-primary" %></td>
               </tr>
             <% end %>
             </%= paginate @posts %>
