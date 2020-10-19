@@ -63,3 +63,40 @@
       text-align: center;
       margin: 30px 0;
     }
+
+// post_show
+  // info_space
+    .info_space{
+      padding-top: 100px;
+    }
+
+    .info_space div div p{
+      font-size: 22px;
+    }
+
+    .info_space div .col-3{
+      font-weight: bold;
+    }
+
+    .info_space div{
+      margin: 5px 0;
+    }
+
+  // show_btn_space
+    .show_btn_space{
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .show_btn_space div div a{
+      width: 100px;
+    }
+
+    .back_btn{
+      margin-top: 50px;
+    }
+
+    .back_btn a{
+      text-align: center;
+      width: 150px;
+    }
