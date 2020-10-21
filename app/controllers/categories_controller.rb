@@ -23,7 +23,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.user_id = current_user.id
   	if @category.save
-  		redirect_to user_categories_path(current_user), notice: "Posted successfully!"
+  		redirect_to new_user_category_path(current_user), notice: "Posted successfully!"
   	else
   		@user = User.find(params[:id])
   		render 'users/show'
@@ -37,7 +37,7 @@ class CategoriesController < ApplicationController
   def update
     @category = Category.find(params[:id])
   	if @category.update(category_params)
-  		redirect_to user_categories_path(current_user), notice: "Updated successfully!"
+  		redirect_to new_user_category_path(current_user), notice: "Updated successfully!"
   	else
   		render :edit
   	end
@@ -46,7 +46,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
   	@category.destroy
-  	redirect_to user_categories_path(current_user), notice: "Deleted successfully!"
+  	redirect_to new_user_category_path(current_user), notice: "Deleted successfully!"
   end
 
 

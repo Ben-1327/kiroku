@@ -41,6 +41,12 @@ class PostsController < ApplicationController
     @category = @user.categories.find_by(id: @post.category_id)
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+  	@post.destroy
+  	redirect_to user_posts_path(current_user), notice: "Deleted successfully!"
+  end
+
 
   private
 
