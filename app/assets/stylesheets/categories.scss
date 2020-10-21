@@ -51,3 +51,38 @@
       .category_index table thead tr th:nth-child(3){
         width: 10%;
       }
+
+
+  // category_show
+    // kiroku_index
+      .kiroku_index{
+        margin-top: 60px;
+        text-align: center;
+      }
+
+      .kiroku_index h2{
+        display: inline-block;
+        background: linear-gradient(transparent 60%, #ff7f4d 50%);
+      }
+
+      .kiroku_index table{
+        text-align: center;
+        margin: 30px 0;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0px;
+      }
+
+      .kiroku_index table tr:nth-child(2n){
+        background-color: #ededed;
+      }
+
+      .kiroku_index table th,table td{
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .show_kiroku_btn{
+        text-align: center;
+        margin: 30px 0;
+      }
