@@ -46,19 +46,41 @@
     }
 
 
-  // About Us
+  // About
 
-    .text_area{
-      position: relative;
-      margin-left: 50px;
+    .note_area .note{
+      margin: 50px 10px;
+      padding: 40px 30px;
+      border: solid 2px black;
+      background-image: image-url("note.png");
+      background-color:rgba(245,245,226,0.6);
+      background-blend-mode:lighten;
+      background-size: cover;
+      background-position: top;
     }
 
-    .text_area p{
-      font-size: 20px;
+    .note_area .note .img_area{
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .note_area .note .text_area{
+      position: relative;
+      height: 400px;
+    }
+
+    .note_area .note .text_area .contents{
       position: absolute;
       top: 50%;
-      -webkit-transform : translateY(-50%);
-      transform : translateY(-50%);
+      left: 50%;
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      width: 70%;
+      line-height: 2;
+    }
+
+    .note_area .note .text_area .contents p{
+      border-bottom: solid 3px black;
     }
 
 
