@@ -24,13 +24,19 @@
    font-style: normal;
   }
 
+  :root{
+    --main-text: #404040;
+    --main-bg: #fff;
+    --gray: #fff;
+  }
+
 
   * {
    margin: 0;
    padding: 0;
    max-width: 100%;
    box-sizing: border-box;
-   color: #404040;
+   color: var(--main-text);
   }
 
   li {
@@ -50,7 +56,7 @@
   header{
    position: fixed;
    height: 10vh;
-   background-color: white;
+   background-color: var(--gray);
    transition: .5s;
    width: 100%;
    top: 0;
@@ -102,6 +108,32 @@
   }
 
 
+
+  // ダークモード
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --main-text: #fff;
+        --main-bg: #000;
+        --gray: #333;
+      }
+
+      *{
+        color: var(--main-text);
+      }
+
+      header{
+        background-color: var(--gray);
+      }
+
+      .main{
+        background-color: var(--main-bg);
+      }
+
+      .btn{
+        color: #fff;
+      }
+
+    }
 
 
   /* 480px以下に適用されるCSS（スマホ用） */
