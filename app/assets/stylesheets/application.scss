@@ -27,7 +27,6 @@
   :root{
     --main-text: #404040;
     --main-bg: #fff;
-
     --gray: #fff;
 
   }
@@ -73,6 +72,10 @@
     width: 100%;
   }
 
+  .page{
+    padding-top: 50px;
+  }
+
   .wrapper{
    min-height: 100vh;
    position: relative;
@@ -97,7 +100,6 @@
   }
 
   .title_part h1{
-    margin-top: 50px;
     margin-left: 15%;
   }
 
@@ -118,8 +120,8 @@
       :root {
 
         --main-text: #fff;
-        --main-bg: #000;
-        --gray: #333;
+        --main-bg: #333;
+        --gray: #4d4d4d;
 
       }
 

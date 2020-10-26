@@ -1,32 +1,30 @@
 <%= stylesheet_link_tag 'categories' %>
 
 <div class="category_index page">
-  <div class="main">
-    <div class="title_part">
-      <h1>Category Index</h1>
-    </div>
-    <div class="container">
-      <div class="category_index">
-        <table>
-          <thead>
+  <div class="title_part">
+    <h1>Category Index</h1>
+  </div>
+  <div class="container">
+    <div class="category_index">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @categories.each do |category| %>
             <tr>
-              <th>Name</th>
-              <th>Edit</th>
-              <th>Delete</th>
+              <td><%= link_to category.name, user_category_path(category.user, category), class: "link_text" %></td>
+              <td><%= link_to "Edit", edit_user_category_path(category.user, category), class: "btn btn-primary" %></td>
+              <td><%= link_to "Delete", user_category_path(category.user, category), method: :delete, class: "btn btn-danger" %></td>
             </tr>
-          </thead>
-          <tbody>
-            <% @categories.each do |category| %>
-              <tr>
-                <td><%= link_to category.name, user_category_path(category.user, category), class: "link_text" %></td>
-                <td><%= link_to "Edit", edit_user_category_path(category.user, category), class: "btn btn-primary" %></td>
-                <td><%= link_to "Delete", user_category_path(category.user, category), method: :delete, class: "btn btn-danger" %></td>
-              </tr>
-            <% end %>
-            </%= paginate @categories %>
-          </tbody>
-        </table>
-      </div>
+          <% end %>
+          </%= paginate @categories %>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
