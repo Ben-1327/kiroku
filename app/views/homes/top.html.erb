@@ -7,18 +7,18 @@
         <h1>We need to record <br>for growing up</h1>
       </div>
       <div class="col login_space">
-        <%= link_to "ログイン", new_user_session_path, class: "login_btn btn btn-success btn-lg" %>
-        <%= link_to "新規登録", new_user_registration_path, class:"create_btn btn btn-primary btn-lg" %>
+        <%= link_to "Log In", new_user_session_path, class: "login_btn btn btn-success btn-lg" %>
+        <%= link_to "Sign Up", new_user_registration_path, class:"create_btn btn btn-primary btn-lg" %>
       </div>
     </div>
   </div>
   <div id="about" class="about_area area">
     <div class="container">
-      <div class="title_area">
+      <!-- <div class="title_area">
         <h2 class="each_title">About</h2>
-      </div>
+      </div> -->
       <div class="row note_area">
-        <div class="col note">
+        <div class="col note note_l">
           <div class="img_area">
             <%= image_tag "kiroku_logo.png", :width => "400", :height => "auto" %>
           </div>
@@ -32,33 +32,31 @@
             </div>
           </div>
         </div>
-        <div class="col note">
+        <div class="col note note_r">
           <div class="img_area">
-            <%= image_tag "user_show.png", :width => "400", :height => "auto" %>
+            <%= image_tag "user_show.png", :width => "800", :height => "auto", class:"black_line" %>
           </div>
-          <div class="text_area">
-            <div class="contents">
-              <p>テストテストテストテストテストテストテス</p>
-              <p>テストテストテストテストテストテスト</p>
-              <p>テストテストテストテストテストテスト</p>
-              <p>テストテストテストテストテストテスト</p>
-            </div>
+          <div class="img_area">
+            <%= image_tag "post_show.png", :width => "800", :height => "auto", class:"black_line" %>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="menu_area area">
+  <div class="message_area area">
     <div class="container">
-      <div class="title_area">
-        <h2 class="each_title">Menu</h2>
-      </div>
-    </div>
-  </div>
-  <div class="reserve_area area">
-    <div class="container">
-      <div class="title_area">
-        <h2 class="each_title">Reserve</h2>
+      <div class="message">
+        <div class="message_text">
+          <p>あなたは同じことを何回も検索して時間を無駄にしていませんか？</p>
+          <p>検索するだけでなにも身についていないなんてことありませんか？</p>
+          <p>「一度の検索から価値ある学びを」</p>
+          <p>Kirokuはこのような考えから生まれたアプリです。何度も同じ検索をせずとも記録と復習ができるアプリが作りたいという想いから生まれました。</p>
+          <p></p>
+          <div class="name_area">
+            <p class="name">Taichi Okada</p>
+            <%= image_tag "Ben_sig.svg", :width => "100", :height => "auto", class:"name_logo" %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

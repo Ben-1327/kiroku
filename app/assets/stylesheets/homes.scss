@@ -15,8 +15,11 @@
   .each_title{
     display: inline-block;
     background: linear-gradient(transparent 60%, #ffb2ff 50%);
+    margin-top: 20px;
     margin-bottom: 50px;
   }
+
+
 
 
   // top_img_area
@@ -48,172 +51,60 @@
 
   // About
 
-    .note_area .note{
-      margin: 50px 10px;
-      padding: 40px 30px;
-      border: solid 2px black;
-      background-image: image-url("note.png");
-      background-color:rgba(245,245,226,0.6);
-      background-blend-mode:lighten;
-      background-size: cover;
-      background-position: top;
+    // .about_area{
+    //   margin-top: 0;
+    //   background-image: image-url("note_big.png");
+    //   background-color:rgba(245,245,226,0.6);
+    //   background-blend-mode:lighten;
+    //   background-size: cover;
+    //   background-position: top;
+    // }
+
+    .note_area{
+      text-align: center;
+      padding-bottom: 70px;
     }
 
-    .note_area .note .img_area{
-      margin-top: 20px;
+    .note_l{
+      position: relative;
+      left: -15%;
+      text-align: center;
+    }
+
+    .note_r{
+      position: relative;
+      right: -15%;
       text-align: center;
     }
 
     .note_area .note .text_area{
       position: relative;
-      height: 400px;
+      height: 600px;
     }
 
-    .note_area .note .text_area .contents{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform : translate(-50%,-50%);
-      transform : translate(-50%,-50%);
-      width: 70%;
-      line-height: 2;
+    .img_area{
+      margin-top: 120px;
     }
 
-    .note_area .note .text_area .contents p{
-      color: black;
-      border-bottom: solid 3px black;
+    .text_area{
+      padding-top: 200px;
     }
 
-
-
-  // Menu
-    .menu_area{
-      background-image: image-url("memo_01.jpg");
-      background-color:rgba(255,255,255,0.6);
-      background-blend-mode:lighten;
-      background-size: cover;
+    .black_line{
+      border: 1px solid #404040;
     }
 
-    // Menu_table
+  // message
 
-      .menu_table thead tr th{
-        font-size: 24px;
-        font-weight: bold;
-      }
-
-      .menu_table tbody tr td{
-        font-size: 22px;
-        padding: 20px 0;
-      }
-
-      .menu_name{
-        width: 300px;
-      }
-
-      .menu_duration{
-        width: 75px;
-      }
-
-      .menu_price{
-        width: 65px;
-      }
-
-      .menu_gap{
-        width: 50px;
-      }
-
-    // img_area
-      .img_area_01{
-        display: inline-block;
-        text-align: center;
-      }
-
-
-  // Access
-    // shop_info
-      .shop_info_area{
-        position: relative;
-        margin-left: 50px;
-      }
-
-      .info_logo{
-        position: absolute;
-      }
-
-      .shop_info_area h3{
-        font-family: 'CinzelDecorative';
-        position: absolute;
-        top: 20px;
-        left: 30%;
-      }
-
-      // info table
-        .info_table{
-          position: absolute;
-          top: 50%;
-          -webkit-transform : translateY(-50%);
-          transform : translateY(-50%);
-          margin: 30px 0;
-        }
-
-        .info_table tbody tr td{
-          padding: 10px 0;
-        }
-
-        .info_table tbody tr th{
-          padding-right: 40px;
-        }
-
-    // Map
-      .map_area{
-        margin: 40px 0;
-        text-align: center;
-      }
-
-
-  // Reserve
-    .reserve_area{
-      background-image: image-url("memo_02.jpg");
-      background-color:rgba(255,255,255,0.6);
-      background-blend-mode:lighten;
-      background-size: cover;
-      height: 400px;
+    .message_area{
+      background-color: #f8f8f8;
+      padding: 50px 0;
     }
 
-    .reserve_contents{
+    .message{
       text-align: center;
     }
 
-    .reserve_text{
-      margin-top: 30px;
-      margin-bottom: 80px;
-    }
-
-    .reserve_text p{
-      font-size: 20px;
-    }
-
-
-    .form_btn{
-      display: inline-block;
-      text-align: center;
-      width: 150px;
-      height: 60px;
-      border: solid 3px #eb6ea0;
-      border-radius: 5px;
-    }
-
-    .form_btn:hover{
-      background-color: #eb6ea0;
-      border: solid 3px #eb6ea0;
-    }
-
-    .reserve_btn{
-      color: #eb6ea0;
-      line-height: 60px;
-      font-size: 22px;
-    }
-
-    .reserve_btn:hover{
-      color: white;
+    .message_text p{
+      font-family: "g_pencilkaisho_free"
     }
