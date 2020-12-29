@@ -13,8 +13,14 @@
     <div class="wrapper">
       <header>
         <div class="logo_space">
-          <%= link_to root_path do %>
-          <h3>Kiroku</h3>
+          <% if user_signed_in? %>
+            <%= link_to user_path(current_user) do %>
+            <h3>Kiroku</h3>
+            <% end %>
+          <% else %>
+            <%= link_to root_path do %>
+            <h3>Kiroku</h3>
+            <% end %>
           <% end %>
         </div>
         <div class="nav_space">
