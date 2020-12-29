@@ -24,6 +24,13 @@
    font-style: normal;
   }
 
+  @font-face {
+   font-family: 'g_pencilkaisho_free';
+   src:asset-url('g_pencilkaisho_free.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+  }
+
   :root{
     --main-text: #404040;
     --main-bg: #fff;
