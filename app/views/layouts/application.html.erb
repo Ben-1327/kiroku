@@ -14,11 +14,11 @@
       <header>
         <div class="logo_space">
           <% if user_signed_in? %>
-            <%= link_to user_path(current_user) do %>
+            <%= link_to user_path(current_user), class:"link_text" do %>
             <h3>Kiroku</h3>
             <% end %>
           <% else %>
-            <%= link_to root_path do %>
+            <%= link_to root_path,class:"link_text" do %>
             <h3>Kiroku</h3>
             <% end %>
           <% end %>
