@@ -45,7 +45,7 @@
             <th>Date</th>
             <th>Title</th>
             <th>Content</th>
-            <th>Quotation</th>
+            <th>Link</th>
             <th>Category</th>
             <th>Show</th>
           </tr>
@@ -56,7 +56,7 @@
               <td><%= l post.created_at %></td>
               <td><%= post.title %></td>
               <td><%= post.content.truncate(25) %></td>
-              <td><%= link_to "Quotation", post.quotation, target: :_blank %></td>
+              <td><%= link_to "Link", post.quotation, target: :_blank %></td>
               <td><%= post.category.name %></td>
               <td><%= link_to "Show", user_post_path(post.user, post), class: "btn btn-primary" %></td>
             </tr>
