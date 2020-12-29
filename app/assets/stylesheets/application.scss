@@ -117,13 +117,13 @@
 
   // ダークモード
     @media (prefers-color-scheme: dark) {
-      :root {
-
-        --main-text: #fff;
-        --main-bg: #333;
-        --gray: #4d4d4d;
-
-      }
+      // :root {
+      //
+      //   --main-text: #fff;
+      //   --main-bg: #333;
+      //   --gray: #4d4d4d;
+      //
+      // }
 
       *{
         color: var(--main-text);
