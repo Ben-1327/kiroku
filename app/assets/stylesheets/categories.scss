@@ -36,8 +36,8 @@
         margin: 0 auto;
       }
 
-      .category_index table tbody tr{
-        margin: 15px 0;
+      .category_index table thead tr th{
+        text-align: center;
       }
 
       .category_index table thead tr th:nth-child(1){
@@ -50,6 +50,10 @@
 
       .category_index table thead tr th:nth-child(3){
         width: 10%;
+      }
+
+      .category_index table tbody tr{
+        margin: 15px 0;
       }
 
 

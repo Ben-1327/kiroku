@@ -37,7 +37,7 @@
           <tbody>
             <% @categories.each do |category| %>
               <tr>
-                <td><%= link_to category.name, user_category_path(category.user, category) %></td>
+                <td><%= link_to category.name, user_category_path(category.user, category), class:"link_text" %></td>
                 <td><%= link_to "Edit", edit_user_category_path(category.user, category), class: "btn btn-primary" %></td>
                 <td><%= link_to "Delete", user_category_path(category.user, category), method: :delete, class: "btn btn-danger" %></td>
               </tr>
