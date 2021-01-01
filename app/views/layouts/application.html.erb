@@ -7,6 +7,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= analytics_init if Rails.env.production? %>
+    
   </head>
 
   <body>
@@ -34,7 +37,7 @@
           <% else %>
             <ul class="nav p-4">
               <li class="nav-item mr-3"><%= link_to "Top", root_path, class: "btn btn-nav" %></li>
-              <li class="nav-item mr-3"><a href="#about" class="btn btn-nav">How</a></li>
+              <li class="nav-item mr-3"><%= link_to "How", how_path, class: "btn btn-nav" %></li>
               <li class="nav-item mr-3"><%= link_to "Log In", new_user_session_path, class: "btn btn-nav" %></li>
               <li class="nav-item mr-3"><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-nav" %></li>
             </ul>
@@ -70,7 +73,7 @@
         <div class="container">
           <div class="row">
             <div class="col-3 logo_space">
-              <%= link_to root_path do %>
+              <%= link_to root_path, class:"link_text" do %>
                 <h3>Kiroku</h3>
               <% end %>
             </div>
