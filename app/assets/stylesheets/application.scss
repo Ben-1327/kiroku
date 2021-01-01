@@ -157,5 +157,7 @@
 
   /* 480px以下に適用されるCSS（スマホ用） */
     @media screen and (max-device-width: 480px) {
-
+      * {
+       font-size: 22px;
+      }
     }
