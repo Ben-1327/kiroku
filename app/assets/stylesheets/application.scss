@@ -105,9 +105,13 @@
     line-height: 10vh;
   }
 
-  .nav_space{
+  .w_nav{
     position: absolute;
-    right: 300px;
+    right: 200px;
+  }
+
+  .m_nav{
+    display: none;
   }
 
   .title_part h1{
@@ -158,10 +162,40 @@
     //
     // }
 
+    // パソコン向け
+      @media (min-device-width: 480px) {
+        .mobile {
+          display: none;
+        }
+      }
 
   /* 480px以下に適用されるCSS（スマホ用） */
     @media screen and (max-device-width: 480px) {
       * {
        font-size: 22px;
+      }
+
+      .web{
+        display: none;
+      }
+
+      .logo_space h3{
+        font-size: 60px;
+      }
+
+      .w_nav{
+        display: none;
+      }
+
+      .m_nav{
+        display: flex;
+        position: absolute;
+        right: 150px;
+        line-height: 10vh;
+
+      }
+
+      .m_icon{
+        margin: 0 20px;
       }
     }

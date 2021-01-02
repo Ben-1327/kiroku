@@ -36,9 +36,6 @@
       line-height: 90vh;
     }
 
-    .shop_message{
-      display: inline-block;
-    }
 
     .shop_message h1{
       font-family: 'Vogue';
@@ -130,3 +127,27 @@
     .s_img{
       margin: 15px 0;
     }
+
+
+
+
+
+/* 480px以下に適用されるCSS（スマホ用） */
+  @media screen and (max-device-width: 480px) {
+
+    // top Page
+    .top_img{
+      background-image: image-url("memo_03_mobile.jpg");
+      background-attachment: fixed;
+      background-size: 120%;
+      height: 100vh;
+      background-position: top;
+    }
+
+      .shop_message h1{
+        position: relative;
+        top: 35vh;
+        font-size: 90px;
+        display: block;
+      }
+  }

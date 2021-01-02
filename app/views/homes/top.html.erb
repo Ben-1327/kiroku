@@ -2,17 +2,30 @@
 
 <div class="top_page">
   <div class="top_img">
-    <div class="row top_img_contents">
+    <div class="row top_img_contents web">
       <div class="col shop_message">
         <h1>We need to record <br>for growing up</h1>
       </div>
       <div class="col login_space">
+        <% unless user_signed_in? %>
         <%= link_to "Log In", new_user_session_path, class: "login_btn btn btn-success btn-lg" %>
         <%= link_to "Sign Up", new_user_registration_path, class:"create_btn btn btn-primary btn-lg" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="top_img_contents mobile">
+      <div class="shop_message">
+        <h1>We need to record <br>for growing up</h1>
+        <div class="login_space">
+          <% unless user_signed_in? %>
+          <%= link_to "Log In", new_user_session_path, class: "login_btn btn btn-success btn-lg" %>
+          <%= link_to "Sign Up", new_user_registration_path, class:"create_btn btn btn-primary btn-lg" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-  <div id="about" class="about_area area">
+  <div id="about" class="about_area area web">
     <div class="container">
       <!-- <div class="title_area">
         <h2 class="each_title">About</h2>
@@ -35,6 +48,35 @@
         <div class="col note note_r">
           <div class="img_area">
             <%= image_tag "user_show.png", :width => "800", :height => "auto", class:"black_line" %>
+          </div>
+          <div class="img_area">
+            <%= image_tag "post_show.png", :width => "800", :height => "auto", class:"black_line" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="about" class="about_area area mobile">
+    <div class="container">
+      <!-- <div class="title_area">
+        <h2 class="each_title">About</h2>
+      </div> -->
+      <div class="note_area">
+        <div class="note">
+          <div class="img_area">
+            <%= image_tag "kiroku_logo.png", :width => "400", :height => "auto" %>
+          </div>
+          <div class="img_area">
+            <%= image_tag "user_show.png", :width => "800", :height => "auto", class:"black_line" %>
+          </div>
+          <div class="text_area">
+            <div class="contents">
+              <p>　Kirokuはあなたの疑問を記録し、振り返る</p>
+              <p>ためのアプリです。</p>
+              <p>一回で全てを覚える必要はなく、自分専用の</p>
+              <p>辞書をKirokuに作り、次はここを見直せばい</p>
+              <p>いのです。</p>
+            </div>
           </div>
           <div class="img_area">
             <%= image_tag "post_show.png", :width => "800", :height => "auto", class:"black_line" %>

@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <%= analytics_init if Rails.env.production? %>
-    
+
   </head>
 
   <body>
@@ -45,18 +45,16 @@
         </div>
         <div class="nav_space m_nav">
           <% if user_signed_in? %>
-            <ul class="nav p-4">
-              <li class="nav-item mr-3"><%= link_to "New Kiroku", new_user_post_path(current_user), class: "btn btn-nav" %></li>
-              <li class="nav-item mr-3"><%= link_to "My Kiroku",user_posts_path(current_user), class: "btn btn-nav" %></li>
-              <li class="nav-item mr-3"><%= link_to "My Page", user_path(current_user),class: "btn btn-nav" %></li>
-              <li class="nav-item"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-nav" %></li>
+            <ul class="nav">
+              <li class="n-item m_icon"><%= link_to new_user_post_path(current_user), class:"link_text" do %><%= icon('fas', 'feather') %><% end %></li>
+              <li class="n-item m_icon"><%= link_to user_posts_path(current_user), class:"link_text" do %><%= icon('fas', 'bookmark') %><% end %></li>
+              <li class="n-item m_icon"><%= link_to user_path(current_user), class:"link_text" do %><%= icon('fas', 'user') %><% end %></li>
+              <li class="n-item m_icon"><%= link_to destroy_user_session_path, method: :delete, class:"link_text" do %><%= icon('fas', 'sign-out-alt') %><% end %></li>
             </ul>
           <% else %>
-            <ul class="nav p-4">
-              <li class="nav-item mr-3"><%= link_to root_path, class:"link_text" do %><%= icon('fas', 'home') %><% end %></li>
-              <li class="nav-item mr-3"><a href="#about" class="btn btn-nav">How</a></li>
-              <li class="nav-item mr-3"><%= link_to "Log In", new_user_session_path, class: "btn btn-nav" %></li>
-              <li class="nav-item mr-3"><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-nav" %></li>
+            <ul class="nav">
+              <li class="n_item m_icon"><%= link_to root_path, class:"link_text" do %><%= icon('fas', 'home fa-2x') %><% end %></li>
+              <li class="n_item m_icon"><%= link_to how_path, class:"link_text" do %><%= icon('fas', 'info-circle fa-2x')%><% end %></li>
             </ul>
           <% end %>
         </div>
