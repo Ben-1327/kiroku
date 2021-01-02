@@ -6,7 +6,7 @@
       <h2>How To Use Kiroku</h2>
     </div>
     <div class="contents_how">
-      <div class="category how_page">
+      <div class="category how_page web">
         <div class="container">
           <div class="row">
             <div class="col">
@@ -22,7 +22,21 @@
           </div>
         </div>
       </div>
-      <div class="post how_page bg_gr">
+      <div class="category how_page mobile">
+        <div class="container">
+          <h3>カテゴリー登録</h3>
+          <div class="contents">
+            <div class="text_space">
+              <p>Kirokuを作る前にはカテゴリー選択が必要になってます。カテゴリーを事前に登録しましょう。</p>
+              <p>プログラミング・デザイン・勉強はもちろん、パソコンをあまり使わない、料理・おすすめのレストランなどのブックマークにも使えます。</p>
+            </div>
+            <div class="img_space">
+              <%= image_tag "category_new.png", :width => "800", :height => "auto", class:"black_line" %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post how_page bg_gr web">
         <div class="container">
           <div class="row">
             <div class="col img_space">
@@ -39,7 +53,24 @@
           </div>
         </div>
       </div>
-      <div class="category how_page">
+      <div class="post how_page bg_gr mobile">
+        <div class="container">
+          <h3>Kirokuする</h3>
+          <div class="contents">
+            <div class="img_space">
+              <%= image_tag "post_new.png", :width => "800", :height => "auto", class:"s_img black_line" %>
+            </div>
+            <div class="text_space">
+              <p>あなたが何かを検索した際にKirokuにブックマークを残せます。これをkirokuと言うことにしましょう。</p>
+              <p>その際にカテゴリー選択が必要になってます。カテゴリーを事前に登録しましょう。</p>
+            </div>
+            <div class="img_space">
+              <%= image_tag "post_show.png", :width => "800", :height => "auto", class:"s_img black_line" %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category how_page web">
         <div class="container">
           <div class="row">
             <div class="col">
@@ -53,6 +84,24 @@
             <div class="col img_space">
               <%= image_tag "post_index.png", :width => "500", :height => "auto", class:"s_img black_line" %>
               <%= image_tag "category_index.png", :width => "500", :height => "auto", class:"s_img black_line" %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category how_page mobile">
+        <div class="container">
+          <h3>kirokuを見返す</h3>
+          <div class="contents">
+            <div class="img_space">
+              <%= image_tag "post_index.png", :width => "800", :height => "auto", class:"s_img black_line" %>
+            </div>
+            <div class="text_space">
+              <p>Kirokuを使えばもう何度も検索する必要はありません。</p>
+              <p>今までのkiroku一覧はもちろん、kirokuをジャンルごとにも見返すことができます。</p>
+              <p>あなたのKirokuを見返してみましょう。</p>
+            </div>
+            <div class="img_space">
+              <%= image_tag "category_index.png", :width => "800", :height => "auto", class:"s_img black_line" %>
             </div>
           </div>
         </div>

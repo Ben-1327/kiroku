@@ -136,13 +136,13 @@
   @media screen and (max-device-width: 480px) {
 
     // top Page
-    .top_img{
-      background-image: image-url("memo_03_mobile.jpg");
-      background-attachment: fixed;
-      background-size: 120%;
-      height: 100vh;
-      background-position: top;
-    }
+      .top_img{
+        background-image: image-url("memo_03_mobile.jpg");
+        background-attachment: fixed;
+        background-size: 120%;
+        height: 100vh;
+        background-position: top;
+      }
 
       .shop_message h1{
         position: relative;
@@ -150,4 +150,16 @@
         font-size: 90px;
         display: block;
       }
+
+    // how Page
+      .text_space{
+        position: relative;
+        margin: 50px 0;
+      }
+
+      .img_space{
+        text-align: center;
+      }
+
+
   }
