@@ -25,7 +25,7 @@
               <td><%= post.content.truncate(25) %></td>
               <td><%= link_to "Link", post.quotation, target: :_blank %></td>
               <td><%= post.category.name %></td>
-              <td><%= link_to "Show", user_post_path(post.user, post), class: "btn btn-primary" %></td>
+              <td><%= link_to "Show", user_post_path(post.user, post), class: "btn simple_square_btn2" %></td>
             </tr>
           <% end %>
           </%= paginate @posts %>

@@ -46,10 +46,10 @@
         <div class="nav_space m_nav">
           <% if user_signed_in? %>
             <ul class="nav">
-              <li class="n-item m_icon"><%= link_to new_user_post_path(current_user), class:"link_text" do %><%= icon('fas', 'feather') %><% end %></li>
-              <li class="n-item m_icon"><%= link_to user_posts_path(current_user), class:"link_text" do %><%= icon('fas', 'bookmark') %><% end %></li>
-              <li class="n-item m_icon"><%= link_to user_path(current_user), class:"link_text" do %><%= icon('fas', 'user') %><% end %></li>
-              <li class="n-item m_icon"><%= link_to destroy_user_session_path, method: :delete, class:"link_text" do %><%= icon('fas', 'sign-out-alt') %><% end %></li>
+              <li class="n-item m_icon"><%= link_to new_user_post_path(current_user), class:"link_text" do %><%= icon('fas', 'feather fa-2x') %><% end %></li>
+              <li class="n-item m_icon"><%= link_to user_posts_path(current_user), class:"link_text" do %><%= icon('fas', 'bookmark fa-2x') %><% end %></li>
+              <li class="n-item m_icon"><%= link_to user_path(current_user), class:"link_text" do %><%= icon('fas', 'user fa-2x') %><% end %></li>
+              <li class="n-item m_icon"><%= link_to destroy_user_session_path, method: :delete, class:"link_text" do %><%= icon('fas', 'sign-out-alt fa-2x') %><% end %></li>
             </ul>
           <% else %>
             <ul class="nav">

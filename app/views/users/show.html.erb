@@ -17,7 +17,7 @@
       <div class="col-sm-2 edit_space">
         <div class="edit_btn">
           <% if @user == current_user %>
-            <%= link_to "Edit", edit_user_path(current_user), class: "btn btn-primary" %>
+            <%= link_to "Edit", edit_user_path(current_user), class: "btn simple_square_btn2" %>
           <% end %>
         </div>
         <div class="col-sm-1"></div>
@@ -27,12 +27,12 @@
       <div class="row">
         <div class="col post_btn">
           <% if @user == current_user %>
-            <%= link_to "New Kiroku", new_user_post_path(current_user),class: "btn btn-primary" %>
+            <%= link_to "New Kiroku", new_user_post_path(current_user),class: "btn simple_square_btn2" %>
           <% end %>
         </div>
         <div class="col new_cate_btn">
           <% if @user == current_user %>
-            <%= link_to "New Category", new_user_category_path(current_user), class: "btn btn-primary" %>
+            <%= link_to "New Category", new_user_category_path(current_user), class: "btn simple_square_btn2" %>
           <% end %>
         </div>
       </div>
@@ -58,13 +58,13 @@
               <td><%= post.content.truncate(25) %></td>
               <td><%= link_to "Link", post.quotation, target: :_blank %></td>
               <td><%= post.category.name %></td>
-              <td><%= link_to "Show", user_post_path(post.user, post), class: "btn btn-primary" %></td>
+              <td><%= link_to "Show", user_post_path(post.user, post), class: "btn simple_square_btn2" %></td>
             </tr>
           <% end %>
         </tbody>
       </table>
       <div class="show_kiroku_btn">
-        <%= link_to "Kiroku Index",user_posts_path(@user), class: "btn btn-primary kiroku_btn" %>
+        <%= link_to "Kiroku Index",user_posts_path(@user), class: "btn simple_square_btn2 kiroku_btn" %>
       </div>
     </div>
   </div>
